@@ -110,3 +110,4 @@ C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Register.cshtml.g.cs
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Donate.cshtml.g.cs
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\AuthFailed.cshtml.g.cs
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\RegisterSuccess.cshtml.g.cs
