@@ -4,15 +4,23 @@
     ViewData["Title"] = "Donate";
 }
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="~/js/sweetalert2.all.min.js"></script>
+<script src="~/js/sweethelper.js"></script>
+
+
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
 <nav class="navbar navbar-dark bg-dark" style="height:100px;">
     <!-- Navbar content -->
-    
+
     <form class="form-inline">
-        <button class="btn btn-danger">Home</button>
+        <button class="btn btn-danger" asp-page="/index">Home</button>
         <button class="btn btn-danger">Profile</button>
         <button class="btn btn-danger">Donations</button>
         <button class="btn btn-danger">About</button>
-        
+        <button class="btn btn-danger" onclick="alert()">Logout</button>
     </form>
 </nav>
 
