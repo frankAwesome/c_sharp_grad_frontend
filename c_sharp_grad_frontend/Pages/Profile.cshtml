@@ -1,0 +1,45 @@
+﻿@page
+@model c_sharp_grad_frontend.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="~/js/sweetalert2.all.min.js"></script>
+<script src="~/js/sweethelper.js"></script>
+
+
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+<nav class="navbar navbar-dark bg-dark" style="height:100px;">
+    <!-- Navbar content -->
+
+    <form class="form-inline">
+        <button class="btn btn-danger" asp-page="/donate">Home</button>
+        <button class="btn btn-danger" asp-page="/profile">Profile</button>
+        <button class="btn btn-danger" asp-page="/donations">Donations</button>
+        <button class="btn btn-danger" asp-page="/about">About</button>
+        <button class="btn btn-danger" onclick="alert()">Logout</button>
+    </form>
+</nav>
+
+
+<div class="homediv">
+    <div class="text-center">
+        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+
+        <div class="donatediv">
+
+            @*<a>Hello</a>*@
+
+            <h2 class="text-black-50">Profile</h2>
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
