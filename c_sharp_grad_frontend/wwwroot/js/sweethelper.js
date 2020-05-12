@@ -15,11 +15,12 @@ function alert() {
         confirmButtonText: 'Yes, log out!'
     }).then((result) => {
         if (result.value) {
-            Swal.fire(
-                'Logout!',
-                'Successful logout.',
-                'success'
-            )
+            Swal.fire({
+                icon: 'success',
+                title: 'Succesfully logged out.',
+                showConfirmButton: false,
+                timer: 2000
+            })
             var millisecondsToWait = 2000;
             setTimeout(function () {
                 // Whatever you want to do after the wait
