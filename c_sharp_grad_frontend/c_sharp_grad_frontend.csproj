@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\css\bubble.css" />
+    <Content Remove="wwwroot\images\logo.PNG" />
     <Content Remove="wwwroot\js\bubble.js" />
   </ItemGroup>
 

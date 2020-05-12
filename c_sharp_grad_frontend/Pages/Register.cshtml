@@ -15,14 +15,40 @@
 
 <div class="homediv">
     <div class="text-center">
-        <input class="form-control" type="text" placeholder="Username" />
-        <br />
-        <br />
-        <input class="form-control" type="text" placeholder="Password" />
-        <br />
-        <br />
 
-        <a class="btn btn-info" asp-page="/Register">Register</a>
+        <div class="container p-5 my-5 border col-sm logger" >
+            <h1 class="text-white-50">Register</h1>
+            <br>
+            <form method="POST">
+
+                <td>
+                    <input placeholder="Username" class="form-control" required="required" name="username" />
+                </td>
+
+                <br>
+
+
+                <td>
+                    <input path="password" type="password" placeholder="Password" class="form-control" required="required" name="password" />
+                </td>
+
+                <br>
+                <br>
+
+                <td><input type="submit" class="btn-lg btn btn-outline-primary btn-block"/></td>
+
+
+                <br>
+
+                <a class="btn-lg btn btn-outline-success btn-block" href="/login">Login</a>
+
+                <p class="mt-5 mb-3 text-muted">BBD © 2020</p>
+
+            </form>
+
+
+        </div>
+
     </div>
 
 
