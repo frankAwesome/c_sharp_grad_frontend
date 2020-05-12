@@ -1,6 +1,26 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.homediv {
+    background-image: url("/images/backd.png");
+    width: 1920px;
+    height: 810px;
+    background-size: 100% 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    border-radius: 20px;
+    float:left;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -16,6 +36,15 @@ a {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -59,13 +88,6 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
