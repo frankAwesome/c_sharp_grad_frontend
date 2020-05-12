@@ -36,6 +36,10 @@ namespace c_sharp_grad_frontend.Pages
                 model.username = Request.Form["username"];
                 model.password = Request.Form["password"];
 
+                //this is where we use Dependency Injection to save stuff like tokens and username so we can access it anuwhere
+
+                token.username = model.username;
+
                 if (await helper.CallAuthService(model))
                     return RedirectToPage("/Donate");
                 else
