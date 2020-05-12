@@ -29,15 +29,22 @@ namespace c_sharp_grad_frontend.Pages
         public async Task<IActionResult> OnPost()
         {
             //the Configuration allow us to get connection strings from the appsetting.json config file
-            var helper = new LoginHelper(Configuration, token);
-            var model = new User();
-            model.username = Request.Form["username"];
-            model.password = Request.Form["password"];
+            try
+            {
+                var helper = new LoginHelper(Configuration, token);
+                var model = new User();
+                model.username = Request.Form["username"];
+                model.password = Request.Form["password"];
 
-            if (await helper.CallAuthService(model))
-                return RedirectToPage("/Donate");
-            else
+                if (await helper.CallAuthService(model))
+                    return RedirectToPage("/Donate");
+                else
+                    return RedirectToPage("/AuthFailed");
+            }
+            catch (Exception)
+            {
                 return RedirectToPage("/AuthFailed");
+            }     
         }
     }
 }
