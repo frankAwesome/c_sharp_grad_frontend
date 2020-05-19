@@ -230,3 +230,4 @@ D:\GradProgramProject\CsharpProjectFrontEnd\c_sharp_grad_frontend\c_sharp_grad_f
 D:\GradProgramProject\CsharpProjectFrontEnd\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\c_sharp_grad_frontend.csproj.CopyComplete
 D:\GradProgramProject\CsharpProjectFrontEnd\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\c_sharp_grad_frontend.dll
 D:\GradProgramProject\CsharpProjectFrontEnd\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\c_sharp_grad_frontend.pdb
+D:\GradProgramProject\CsharpProjectFrontEnd\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\c_sharp_grad_frontend.genruntimeconfig.cache
