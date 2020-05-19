@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="~/css/main.css" />
 <script src="~/js/sweetalert2.all.min.js"></script>
 <script src="~/js/sweethelper.js"></script>
 
@@ -42,27 +43,83 @@
                 <h3 class="text-black-50">With your donation, we can fight back...</h3>
                 <br />
                 <img src="https://s3.amazonaws.com/assets.fullstack.io/n/20200309095518221_react-chartjs.png" />
-                <br/>
+                <br />
                 <a class="text-body">use chart.js or something to show the total income off donations over time.</a>
             </div>
 
 
 
 
-            <div class="card" style="width: 18rem; float: right; margin-right: 350px;">
+            <!--<div class="card" style="width: 18rem; float: right; margin-right: 350px;">
                 <img class="card-img-top" src="https://cdn.theatlantic.com/thumbor/CaZyjb4lEsWdh9nc1Sw1WahtRn0=/0x186:5127x2855/960x500/media/img/mt/2020/03/GettyImages_1198676650_toned/original.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">New Confirmed cases</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
+            </div>-->
+
+            <div class="container" style="width: 40rem; float: right; margin-right: 100px;">
+                <div class="row">
+                    <div class="card card-image col-4" style="background-image: url('https://www.europol.europa.eu/sites/default/files/images/corona_counterfeit.jpg'); background-size: cover; height:220px; top:5px; width:500px;">
+                        <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                            <div style="margin: 0 auto">
+                                <h1 class="orange-text" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:30px">New Cases</h1>
+                                <h1 class="card-title pt-2" style="color: yellow; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><strong>@Model.global.NewConfirmed</strong></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-image col-4" style="background-image: url('https://www.lls.org/sites/default/files/National/USA/Image/banner/default-banner-coronavirus.jpg'); background-size: cover; height:220px; top:5px; left:6px; width:500px;">
+                        <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                            <div style="margin: 0 auto">
+                                <h1 class="orange-text" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:30px;">New Recoveries</h1>
+                                <h1 class="card-title pt-2" style="color: yellow; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><strong>@Model.global.NewRecovered</strong></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-image col-4" style="background-image: url('https://www.europol.europa.eu/sites/default/files/images/corona_counterfeit.jpg'); background-size: cover; height:220px; top:5px; left:12px; width:500px;">
+                        <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                            <div style="margin: 0 auto">
+                                <h1 class="orange-text" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:30px;">New Deaths</h1>
+                                <h1 class="card-title pt-2" style="color: yellow; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><strong>@Model.global.NewDeaths</strong></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card card-image col-4" style="background-image: url('https://www.lls.org/sites/default/files/National/USA/Image/banner/default-banner-coronavirus.jpg'); background-size: cover; height:220px; top:10px; width:500px;">
+                        <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                            <div style="margin: 0 auto">
+                                <h1 class="orange-text" style="        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;font-size: 30px;">Total   Cases</h1>
+                                <h1 class="card-title pt-2" style="color: yellow; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><strong>@Model.global.TotalConfirmed</strong></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-image col-4" style="background-image: url('https://www.europol.europa.eu/sites/default/files/images/corona_counterfeit.jpg'); background-size: cover; height:220px; top:10px; left:6px; width:500px;">
+                        <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                            <div style="margin: 0 auto">
+                                <h1 class="orange-text" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:30px;">Total Recoveries</h1>
+                                <h1 class="card-title pt-2" style="color: yellow; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><strong>@Model.global.TotalRecovered</strong></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-image col-4" style="background-image: url('https://www.lls.org/sites/default/files/National/USA/Image/banner/default-banner-coronavirus.jpg'); background-size: cover; height:220px; top:10px; left:12px; width:500px;">
+                        <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                            <div style="margin: 0 auto">
+                                <h1 class="orange-text" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:30px;">Total Deaths</h1>
+                                <h1 class="card-title pt-2" style="color: yellow; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"><strong>@Model.global.TotalDeaths</strong></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
 
         </div>
+
+
+
     </div>
+</div>
 
 
 </div>
