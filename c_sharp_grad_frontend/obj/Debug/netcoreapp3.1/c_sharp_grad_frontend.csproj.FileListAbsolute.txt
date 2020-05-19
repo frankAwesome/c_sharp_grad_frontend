@@ -114,3 +114,8 @@ C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\About.cshtml.g.cs
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Profile.cshtml.g.cs
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Donations.cshtml.g.cs
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\c_sharp_grad_frontend.csproj.CoreCompileInputs.cache
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\c_sharp_grad_frontend.genruntimeconfig.cache
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\ProfileAdd.cshtml.g.cs
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\ProfileView.cshtml.g.cs
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\ProfileEdit.cshtml.g.cs

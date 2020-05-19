@@ -26,6 +26,7 @@ namespace c_sharp_grad_frontend
         {
             services.AddRazorPages();
             services.AddSingleton<IToken, Token>();
+            services.AddSingleton<IUserProfile, UserProfile>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
