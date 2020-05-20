@@ -119,3 +119,4 @@ C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\ProfileAdd.cshtml.g.cs
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\ProfileView.cshtml.g.cs
 C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\ProfileEdit.cshtml.g.cs
+C:\Users\bbdnet2240\Projects\Grad C#\c_sharp_grad_frontend\c_sharp_grad_frontend\obj\Debug\netcoreapp3.1\Razor\Pages\AdminHome.cshtml.g.cs

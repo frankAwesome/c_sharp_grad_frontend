@@ -53,13 +53,6 @@ namespace c_sharp_grad_frontend.Pages
             userProfile.ExpirationOnCard = DateTime.Parse(Request.Form["expdate"]);
             userProfile.PaymentType = Request.Form["paymenttype"];
 
-            //date
-            //type
-
-            var guy = userProfile;
-
-
-
             var helper = new UserProfileHelper(Configuration, token);
 
             if (await helper.PostProfile(userProfile))

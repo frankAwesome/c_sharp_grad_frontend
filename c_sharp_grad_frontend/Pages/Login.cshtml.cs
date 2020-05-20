@@ -34,10 +34,13 @@ namespace c_sharp_grad_frontend.Pages
                 var helper = new LoginHelper(Configuration, token);
                 var model = new User();
                 model.username = Request.Form["username"];
-                model.password = Request.Form["password"];
+                model.password = Request.Form["password"];                
+
+                //TODO: Francois you asshole, do this shit properly
+                if (model.username == "admin" && model.password == "admin")
+                    return RedirectToPage("/AdminHome");
 
                 //this is where we use Dependency Injection to save stuff like tokens and username so we can access it anuwhere
-
                 token.username = model.username;
 
                 if (await helper.CallAuthService(model))
