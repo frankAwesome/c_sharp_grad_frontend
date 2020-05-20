@@ -7,6 +7,7 @@ namespace c_sharp_grad_frontend.Models
 {
     public class UserProfile:IUserProfile
     {
+        public int Id { get; set; }
         public byte[] AvatarOne { get; set; }
         public byte[] AvatarTwo { get; set; }
         public byte[] AvatarThree { get; set; }
