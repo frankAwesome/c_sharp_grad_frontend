@@ -54,6 +54,7 @@ namespace c_sharp_grad_frontend.Helpers
             var json = JsonConvert.SerializeObject(userProfile);
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
             var httpClient = new HttpClient(SSLHelper.GetSSL());
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.token);
             var response = await httpClient.PostAsync(configuration.GetConnectionString("PostUserProfileService"), httpContent);
             //var responseString = await response.Content.ReadAsStringAsync();
 
@@ -70,6 +71,7 @@ namespace c_sharp_grad_frontend.Helpers
             var json = JsonConvert.SerializeObject(userProfile);
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
             var httpClient = new HttpClient(SSLHelper.GetSSL());
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.token);
             //Update profile
             var response = await httpClient.PutAsync(configuration.GetConnectionString("EditUserProfileService"), httpContent);
             //var responseString = await response.Content.ReadAsStringAsync();
