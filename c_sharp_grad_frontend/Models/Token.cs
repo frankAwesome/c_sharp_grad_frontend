@@ -6,6 +6,8 @@ namespace c_sharp_grad_frontend.Models
     {
         public string token { get; set; }
         public string username { get; set; }
+
+        public decimal amount { get; set; }
         public Token()
         {
         }

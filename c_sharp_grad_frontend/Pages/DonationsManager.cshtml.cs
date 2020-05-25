@@ -33,12 +33,13 @@ namespace c_sharp_grad_frontend.Pages
             image = Convert.ToBase64String(userProfile.AvatarOne);
         }
 
-        public async Task OnPost()
+        public async Task<IActionResult> OnPost()
         {
-            decimal amount = Convert.ToDecimal(Request.Form["amount"]);
+            token.amount = Convert.ToDecimal(Request.Form["amount"]);
             //the Configuration allow us to get connection strings from the appsetting.json config file
-            var helper = new DonationHelper(configuration, token);
-            await helper.PostDonation(amount);
+
+
+            return RedirectToPage("/DonationsConfirmation");
         }
     }
 }
