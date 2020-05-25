@@ -12,6 +12,10 @@ namespace c_sharp_grad_frontend.Pages
 {
     public class AdminHomeModel : PageModel
     {
+        public int amountOfDonations;
+        public decimal totalAmount;
+
+
         IToken token;
         IConfiguration configuration;
         public AdminHomeModel(IToken _token, IConfiguration _configuration)
@@ -23,7 +27,16 @@ namespace c_sharp_grad_frontend.Pages
         public async Task OnGet()
         {
             var helper = new DonationHelper(configuration, token);
-            var allUserDonation = helper.GetAllDonations();
+            var allUserDonation = await helper.GetAllDonations();
+
+            foreach (var item in allUserDonation)
+            {
+                totalAmount += item.Amount;
+            }
+
+            amountOfDonations = allUserDonation.Count();
+
+
 
 
         }

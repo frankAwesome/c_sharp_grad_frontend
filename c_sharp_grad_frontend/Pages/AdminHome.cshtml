@@ -33,13 +33,17 @@
 
             <div style="display: inline-block; float: left; margin-left:150px;">
                 <h1 class="text-black-50">Administrator</h1>
-                <br/>
-                <br/>
-                <h3 class="text-black-50">With your donation, we can fight back...</h3>
                 <br />
-                <img src="https://s3.amazonaws.com/assets.fullstack.io/n/20200309095518221_react-chartjs.png" />
                 <br />
-                <a class="text-body">use chart.js or something to show the total income off donations over time.</a>
+                <h3 class="text-info">Total amount of Donations</h3>
+                <br />
+                <a class="text-black-50">R @Model.totalAmount</a>
+                <br />
+                <br />
+                <br />
+                <h3 class="text-info">Number of Donations</h3>
+                <br />
+                <a class="text-black-50">@Model.amountOfDonations donations</a>
             </div>
 
 
@@ -50,7 +54,7 @@
             <br />
             <br />
             <div style="float: right; margin-right: 650px;">
-                Right div
+                @*Right div*@
 
             </div>
 
