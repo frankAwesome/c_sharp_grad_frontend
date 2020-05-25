@@ -1,0 +1,98 @@
+﻿@page
+@model c_sharp_grad_frontend.Pages.DonationsManagerModel
+@{
+    ViewData["Title"] = "DonationsManager";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="~/js/sweetalert2.all.min.js"></script>
+<script src="~/js/sweethelper.js"></script>
+
+
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+<nav class="navbar navbar-dark bg-dark" style="height:100px;">
+    <!-- Navbar content -->
+
+    <form class="form-inline">
+        <button class="btn btn-danger" asp-page="/donate">Home</button>
+        <button class="btn btn-danger" asp-page="/profile">Profile</button>
+        <button class="btn btn-danger" asp-page="/donations">Donations</button>
+        <button class="btn btn-danger" asp-page="/about">About</button>
+        <button class="btn btn-danger" onclick="alert()">Logout</button>
+    </form>
+</nav>
+
+
+<div class="homediv">
+    <div class="text-center">
+        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+
+        <div class="donatediv">
+            <div style="display: inline-block; float: left; margin-left:150px;">
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <br />
+                        <br />
+                        <h2 class="text-black-50">Make a donation...</h2>
+                        <br />
+                        <form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
+
+
+                            <input type="number" name="amount" placeholder="Donation amount" class="form-control" required id="makedonation" />
+                            <br />
+                            <input type="submit" value="DONATE" class="btn btn-danger" />
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div style="float: right; margin-right: 650px; width: 270px;" class="form-group">
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2>Basic Table</h2>
+                <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in @Model.donations)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.TimeStamp)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+

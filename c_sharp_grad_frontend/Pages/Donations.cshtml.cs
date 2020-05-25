@@ -14,26 +14,50 @@ namespace c_sharp_grad_frontend.Pages
     {
         IToken token;
         IConfiguration configuration;
-        public DonationsModel(IToken _token, IConfiguration _configuration)
+        IUserProfile userProfile;
+
+        public List<Donations> donations;
+        public DonationsModel(IToken _token, IConfiguration _configuration, IUserProfile _userProfile)
         {
             token = _token;
             configuration = _configuration;
-
+            userProfile = _userProfile;
         }
         
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
-            var helper = new DonationHelper(configuration, token);
-            var donations = await helper.GetDonationsForUser(token.username);
+            var helper = new UserProfileHelper(this.configuration, this.token);
+            if (this.userProfile.Firstname == null)
+            {
+                var response = await helper.GetProfile(token.username);
+                if (response != null)
+                {
+                    userProfile.Username = response.Username;
+                    userProfile.AvatarOne = response.AvatarOne;
+                    userProfile.Firstname = response.Firstname;
+                    userProfile.Lastname = response.Lastname;
+                    userProfile.AddressOne = response.AddressOne;
+                    userProfile.AddressTwo = response.AddressTwo;
+                    userProfile.Email = response.Email;
+                    userProfile.Country = response.Country;
+                    userProfile.Zip = response.Zip;
 
-        }
+                    userProfile.NameOnCard = response.NameOnCard;
+                    userProfile.PaymentType = response.PaymentType;
+                    userProfile.ExpirationOnCard = response.ExpirationOnCard;
+                    userProfile.CardNumber = response.CardNumber;
+                    userProfile.CVV = response.CVV;
+                }
 
-        public async Task OnPost()
-        {
-            decimal amount = Convert.ToDecimal(Request.Form["amount"]);
-            //the Configuration allow us to get connection strings from the appsetting.json config file
-            var helper = new DonationHelper(configuration, token);
-            await helper.PostDonation(amount);
+
+                if (response != null)
+                    return RedirectToPage("DonationsManager");
+                else
+                    return RedirectToPage("DonationsCreate");
+            }
+            else
+                return RedirectToPage("DonationsManager");
+
         }
     }
 }
