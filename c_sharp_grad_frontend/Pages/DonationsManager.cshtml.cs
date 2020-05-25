@@ -14,12 +14,15 @@ namespace c_sharp_grad_frontend.Pages
     {
         IToken token;
         IConfiguration configuration;
+        IUserProfile userProfile;
+        public string image;
 
         public List<Donations> donations;
-        public DonationsManagerModel(IToken _token, IConfiguration _configuration)
+        public DonationsManagerModel(IToken _token, IConfiguration _configuration, IUserProfile _userProfile)
         {
             token = _token;
             configuration = _configuration;
+            userProfile = _userProfile;
 
         }
 
@@ -27,7 +30,7 @@ namespace c_sharp_grad_frontend.Pages
         {
             var helper = new DonationHelper(configuration, token);
             donations = await helper.GetDonationsForUser(token.username);
-
+            image = Convert.ToBase64String(userProfile.AvatarOne);
         }
 
         public async Task OnPost()

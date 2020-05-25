@@ -27,7 +27,6 @@ namespace c_sharp_grad_frontend.Pages
 
         public void OnGet()
         {
-            var h = userProfile.Username;
             image = Convert.ToBase64String(userProfile.AvatarOne);
 
         }
