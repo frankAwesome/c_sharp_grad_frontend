@@ -10,30 +10,35 @@ using Microsoft.Extensions.Configuration;
 
 namespace c_sharp_grad_frontend.Pages
 {
-    public class DonationsModel : PageModel
+    public class AdminHomeModel : PageModel
     {
+        public int amountOfDonations;
+        public decimal totalAmount;
+
+
         IToken token;
         IConfiguration configuration;
-        public DonationsModel(IToken _token, IConfiguration _configuration)
+        public AdminHomeModel(IToken _token, IConfiguration _configuration)
         {
             token = _token;
             configuration = _configuration;
 
         }
-        
         public async Task OnGet()
         {
             var helper = new DonationHelper(configuration, token);
-            var donations = await helper.GetDonationsForUser(token.username);
+            var allUserDonation = await helper.GetAllDonations();
 
-        }
+            foreach (var item in allUserDonation)
+            {
+                totalAmount += item.Amount;
+            }
 
-        public async Task OnPost()
-        {
-            decimal amount = Convert.ToDecimal(Request.Form["amount"]);
-            //the Configuration allow us to get connection strings from the appsetting.json config file
-            var helper = new DonationHelper(configuration, token);
-            await helper.PostDonation(amount);
+            amountOfDonations = allUserDonation.Count();
+
+
+
+
         }
     }
 }

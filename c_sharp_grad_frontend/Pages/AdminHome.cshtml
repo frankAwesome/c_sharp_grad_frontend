@@ -1,0 +1,73 @@
+﻿@page
+@model c_sharp_grad_frontend.Pages.AdminHomeModel
+@{
+    ViewData["Title"] = "AdminHome";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="~/js/sweetalert2.all.min.js"></script>
+<script src="~/js/sweethelper.js"></script>
+
+
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+<nav class="navbar navbar-dark bg-dark" style="height:100px;">
+    <!-- Navbar content -->
+
+    <form class="form-inline">
+        <button class="btn btn-danger">Admin Home</button>
+        <button class="btn btn-danger" onclick="alert()">Logout</button>
+    </form>
+</nav>
+
+
+
+<div class="homediv">
+    <div class="text-center">
+        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+        <div class="donatediv">
+
+            <br />
+            <br />
+
+            <div style="display: inline-block; float: left; margin-left:150px;">
+                <h1 class="text-black-50">Administrator</h1>
+                <br />
+                <br />
+                <h3 class="text-info">Total amount of Donations</h3>
+                <br />
+                <a class="text-black-50">R @Model.totalAmount</a>
+                <br />
+                <br />
+                <br />
+                <h3 class="text-info">Number of Donations</h3>
+                <br />
+                <a class="text-black-50">@Model.amountOfDonations donations</a>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style="float: right; margin-right: 650px;">
+                @*Right div*@
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+

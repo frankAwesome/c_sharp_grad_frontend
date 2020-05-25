@@ -28,17 +28,48 @@
 <div class="homediv">
     <div class="text-center">
         <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+        
+            <div class="donatediv">
+                <div style="display: inline-block; float: left; margin-left:150px;">
 
-        <div class="donatediv">
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <br />
+                            <br />
+                            <h2 class="text-black-50">Make a donation...</h2>
+                            <br />
+                            <form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
 
-            @*<a>Hello</a>*@
 
-            <h2 class="text-black-50">Donations</h2>
+                                <input type="number" name="amount" placeholder="Donation amount" class="form-control" required id="makedonation" />
+                                <br/>
+                                <input type="submit" value="DONATE" class="btn btn-danger" />
+                            </form>
+
+                        </div>
+                    </div>
 
 
 
+                </div>
 
-        </div>
+
+                <div style="float: right; margin-right: 650px; width: 270px;" class="form-group">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    Show user's donations here
+
+                  
+
+                </div>
+
+
+            </div>
+
+
+
     </div>
 
 

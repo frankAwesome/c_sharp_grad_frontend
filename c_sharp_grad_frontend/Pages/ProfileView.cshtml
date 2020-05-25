@@ -1,0 +1,100 @@
+﻿@page
+@model c_sharp_grad_frontend.Pages.ProfileViewModel
+@{
+    ViewData["Title"] = "ProfileView";
+    var imgSrc = String.Format("data:image/gif;base64,{0}", @Model.image);
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="~/js/sweetalert2.all.min.js"></script>
+<script src="~/js/sweethelper.js"></script>
+
+
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+<nav class="navbar navbar-dark bg-dark" style="height:100px;">
+    <!-- Navbar content -->
+
+    <form class="form-inline">
+        <button class="btn btn-danger" asp-page="/donate">Home</button>
+        <button class="btn btn-danger" asp-page="/profile">Profile</button>
+        <button class="btn btn-danger" asp-page="/donations">Donations</button>
+        <button class="btn btn-danger" asp-page="/about">About</button>
+        <button class="btn btn-danger" onclick="alert()">Logout</button>
+    </form>
+</nav>
+
+
+
+<div class="homediv">
+    <div class="text-center">
+        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+        <div class="donatediv">
+
+            <br />
+            <br />
+
+            <div style="display: inline-block; float: left; margin-left:150px;">
+                <h1 class="text-black-50">@Model.userProfile.Username's Profile</h1>
+                <br />
+                <br />
+
+                <input type="image" src="@imgSrc" style="width:200px;height:200px" class="rounded-circle" />
+
+                <br />
+                <br />
+                <br />
+                <a class="text-black-50">Firstname: @Model.userProfile.Firstname</a>
+                <br />
+                <a class="text-black-50">Lastname: @Model.userProfile.Lastname</a>
+                <br />
+                <a class="text-black-50">Username: @Model.userProfile.Username</a>
+                <br />
+                <a class="text-black-50">Email: @Model.userProfile.Email</a>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style="float: right; margin-right: 650px;">
+                <a class="text-black-50">Address line 1: @Model.userProfile.AddressOne</a>
+                <br />
+                <a class="text-black-50">Address line 2: @Model.userProfile.AddressTwo</a>
+                <br />
+                <br />
+                <br />
+                <a class="text-black-50">Name on card: @Model.userProfile.NameOnCard</a>
+                <br />
+                <a class="text-black-50">Payment type: @Model.userProfile.PaymentType</a>
+                <br />
+                <a class="text-black-50">Card Number: @Model.userProfile.CardNumber</a>
+                <br />
+                <a class="text-black-50">CVV: @Model.userProfile.CVV</a>
+                <br />
+                <a class="text-black-50">Exp date: @Model.userProfile.ExpirationOnCard</a>
+                <br />
+                <br />
+                <br />
+
+                <a class="btn btn-danger" asp-page="/profileedit">Edit profile</a>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+

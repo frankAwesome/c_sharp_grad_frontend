@@ -1,0 +1,108 @@
+﻿@page
+@model c_sharp_grad_frontend.Pages.ProfileAddModel
+@{
+    ViewData["Title"] = "ProfileAdd";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="~/js/sweetalert2.all.min.js"></script>
+<script src="~/js/sweethelper.js"></script>
+
+
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+<nav class="navbar navbar-dark bg-dark" style="height:100px;">
+    <!-- Navbar content -->
+
+    <form class="form-inline">
+        <button class="btn btn-danger" asp-page="/donate">Home</button>
+        <button class="btn btn-danger" asp-page="/profile">Profile</button>
+        <button class="btn btn-danger" asp-page="/donations">Donations</button>
+        <button class="btn btn-danger" asp-page="/about">About</button>
+        <button class="btn btn-danger" onclick="alert()">Logout</button>
+    </form>
+</nav>
+
+
+<div class="homediv">
+    <div class="text-center">
+        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+        <form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
+            <div class="donatediv">
+                <div style="display: inline-block; float: left; margin-left:150px;">
+
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <br />
+                            <br />
+                            <h2 class="text-black-50">Create your profile...</h2>
+                            <br />
+               
+                            <input type="image" id="avatarimage" src="https://seedlingsgardening.com/wp-content/uploads/sites/9/2016/11/avatar.jpg" style="width:200px;height:200px" class="rounded-circle" />
+
+                            <br />
+                            <label for="avatar" class="text-black-50">Select an image...</label>
+                            <input type="file" id="avatar" name="avatar" class="form-control-file" onchange="readURL(this);"/>
+                            <br />
+                            <input type="text" name="firstname" placeholder="Firstname" class="form-control" required />
+                            <br />
+                            <input type="text" name="lastname" placeholder="Lastname" class="form-control" required />
+                            <br />
+                            <input type="text" name="email" placeholder="Email" class="form-control" required />
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div style="float: right; margin-right: 650px; width: 270px;" class="form-group">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                    <input type="text" name="addressone" placeholder="Address line 1" class="form-control" />
+                    <br />
+                    <input type="text" name="addresstwo" placeholder="Address line 2" class="form-control" />
+                    <br />
+                    <input type="text" name="nameoncard" placeholder="Name on card" class="form-control" />
+                    <br />
+                    <input type="text" name="cardnumber" placeholder="Card number" class="form-control" />
+                    <br />
+                    <input type="text" name="cvv" placeholder="CVV" class="form-control" />
+                    <br />
+                    <label for="cars">Choose payment type:</label>
+
+                    <select id="paymenttypes" class="form-control" name="paymenttype">
+                        <option value="cheque">Cheque</option>
+                        <option value="savings">Savings</option>
+                        <option value="credit">Credit card</option>
+                    </select>
+                       <br/>
+                    <label for="expdate" class="text-black-50">Exp date:</label>
+                    <input type="date" id="expdate" name="expdate" class="form-control">
+
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="submit" value="Create profile" class="btn btn-danger" />
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </form>
+        </div>
+
+
+</div>
+

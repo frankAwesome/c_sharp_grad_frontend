@@ -29,6 +29,7 @@ namespace c_sharp_grad_frontend.Pages
 
         public async Task<bool> GetCovidInfo()
         {
+            global = new GlobalCovid();
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync("https://api.covid19api.com/summary"))
