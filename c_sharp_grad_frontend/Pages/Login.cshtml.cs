@@ -34,9 +34,11 @@ namespace c_sharp_grad_frontend.Pages
                 var helper = new LoginHelper(Configuration, token);
                 var model = new User();
                 model.username = Request.Form["username"];
-                model.password = Request.Form["password"];                
+                model.password = Request.Form["password"];
 
                 //TODO: Francois you asshole, do this shit properly
+                //Environment.GetEnvironmentVariable("DonateAdminPassword");
+
                 if (model.username == "admin" && model.password == "admin")
                     return RedirectToPage("/AdminHome");
 

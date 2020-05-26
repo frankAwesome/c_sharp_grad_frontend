@@ -11,52 +11,27 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using c_sharp_grad_frontend.Helpers;
 
 namespace c_sharp_grad_frontend.Pages
 {
     public class DonateModel : PageModel
     {
-        public DonateModel(IConfiguration configuration, IToken _token)
+        public DonateModel(IConfiguration configuration, IToken _token, IGlobalCovid _global)
         {
             Configuration = configuration;
             token = _token;
+            global = _global;
         }
         public IConfiguration Configuration { get; }
         public IToken token { get; }
-
-        public GlobalCovid global { get; set; }
-
-
-        public async Task<bool> GetCovidInfo()
-        {
-            global = new GlobalCovid();
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync("https://api.covid19api.com/summary"))
-                {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    if (apiResponse == "You have reached maximum request limit.")
-                    {
-                        global.NewConfirmed = 0;
-                        global.NewDeaths = 0;
-                        global.NewRecovered = 0;
-                        global.TotalDeaths = 0;
-                        global.TotalRecovered = 0;
-                        global.TotalConfirmed = 0;
-                        return false;
-
-                    }
-                    JObject json = JObject.Parse(apiResponse);
-                    var val = json["Global"];
-                    global = JsonConvert.DeserializeObject<GlobalCovid>(JsonConvert.SerializeObject(val));
-                }
-            }
-            return true;
-        }
+        public IGlobalCovid global { get; set; }
 
         public async Task OnGetAsync()
         {
-            var val = await GetCovidInfo();
+            var helper = new GlobalCovidHelper(Configuration, token, global);
+            if (global.TotalDeaths == 0)
+                await helper.GetCovidInfo();
         }
     }
 }
