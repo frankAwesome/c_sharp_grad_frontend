@@ -42,6 +42,7 @@ namespace c_sharp_grad_frontend.Helpers
                     global.TotalDeaths = 0;
                     global.TotalRecovered = 0;
                     global.TotalConfirmed = 0;
+                    return;
                 }         
             }
 
