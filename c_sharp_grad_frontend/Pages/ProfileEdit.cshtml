@@ -2,6 +2,8 @@
 @model c_sharp_grad_frontend.Pages.ProfileEditModel
 @{
     ViewData["Title"] = "ProfileEdit";
+    var imgSrc = String.Format("data:image/gif;base64,{0}", @Model.image);
+
 }
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -28,29 +30,84 @@
 <div class="homediv">
     <div class="text-center">
         <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
+        <form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
+            <div class="donatediv">
+                <div style="display: inline-block; float: left; margin-left:150px;">
 
-        <div class="donatediv">
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <br />
+                            <br />
+                            <h2 class="text-black-50">Update your profile...</h2>
+                            <br />
 
-            @*<a>Hello</a>*@
+                            <input type="image" id="avatarimage" src="@imgSrc" style="width:200px;height:200px" class="rounded-circle" />
 
-            @*<h2 class="text-black-50">Profile</h2>*@
-
-            <br />
-            <br />
-            <br />
-            <h3>This is still a work in progess</h3>
-            <br />
-            <br />
-            <a class="btn btn-danger" asp-page="/profileview">Go to profile</a>
-
-
+                            <br />
+                            <label for="avatar" class="text-black-50">Select an image...</label>
+                            <input type="file" id="avatar" name="avatar" class="form-control-file" onchange="readURL(this);" />
+                            <br />
+                            <input type="text" name="firstname" value=@Model.userProfile.Firstname class="form-control" required placeholder="Firstname" />
+                            <br />
+                            <input type="text" name="lastname" value=@Model.userProfile.Lastname class="form-control" required placeholder="Lastname" />
+                            <br />
+                            <input type="text" name="email" value=@Model.userProfile.Email class="form-control" required placeholder="Email" />
 
 
 
+                        </div>
+                    </div>
 
 
-        </div>
+
+                </div>
+
+
+                <div style="float: right; margin-right: 650px; width: 270px;" class="form-group">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                    <input type="text" name="addressone" value=@Model.userProfile.AddressOne class="form-control" placeholder="Address line 1" />
+                    <br />
+                    <input type="text" name="addresstwo" value=@Model.userProfile.AddressTwo class="form-control" placeholder="Address line 2" />
+                    <br />
+                    <input type="text" name="nameoncard" value=@Model.userProfile.NameOnCard class="form-control" placeholder="Name on card" />
+                    <br />
+                    <input type="text" name="cardnumber" value=@Model.userProfile.CardNumber class="form-control" placeholder="Card number" />
+                    <br />
+                    <input type="text" name="cvv" value=@Model.userProfile.CVV class="form-control"  placeholder="CVV" />
+                    <br />
+                    <label for="cars">Choose payment type:</label>
+
+                    <select id="paymenttypes" class="form-control" name="paymenttype">
+                        <option value="cheque">Cheque</option>
+                        <option value="savings">Savings</option>
+                        <option value="credit">Credit card</option>
+                    </select>
+                    <br />
+                    <label for="expdate" class="text-black-50">Exp date:</label>
+                    <input type="date" id="expdate" name="expdate" class="form-control" value="2013-01-08">
+
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="submit" value="Update profile" class="btn btn-danger" />
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </form>
     </div>
 
 
 </div>
+
+
+
