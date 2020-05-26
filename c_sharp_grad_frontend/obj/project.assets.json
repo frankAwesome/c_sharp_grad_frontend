@@ -6047,11 +6047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\plus twillio\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
+      "projectUniqueName": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
       "projectName": "c_sharp_grad_frontend",
-      "projectPath": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\plus twillio\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
+      "projectPath": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
       "packagesPath": "C:\\Users\\bbdnet2240\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\plus twillio\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\obj\\",
+      "outputPath": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

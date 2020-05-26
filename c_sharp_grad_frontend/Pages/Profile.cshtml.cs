@@ -38,6 +38,7 @@ namespace c_sharp_grad_frontend.Pages
                     userProfile.AddressOne = response.AddressOne;
                     userProfile.AddressTwo = response.AddressTwo;
                     userProfile.Email = response.Email;
+                    userProfile.Cell = response.Cell;
                     userProfile.Country = response.Country;
                     userProfile.Zip = response.Zip;
 
