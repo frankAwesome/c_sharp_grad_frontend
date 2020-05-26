@@ -41,6 +41,7 @@ namespace c_sharp_grad_frontend.Pages
             userProfile.Firstname = Request.Form["firstname"];
             userProfile.Lastname = Request.Form["lastname"];
             userProfile.Email = Request.Form["email"];
+            userProfile.Cell = Request.Form["cell"];
 
             userProfile.AddressOne = Request.Form["addressone"];
             userProfile.AddressTwo = Request.Form["addresstwo"];

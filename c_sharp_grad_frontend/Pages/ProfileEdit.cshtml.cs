@@ -44,6 +44,7 @@ namespace c_sharp_grad_frontend.Pages
             userProfile.Firstname = (Request.Form["firstname"]).ToString() ?? userProfile.Firstname;
             userProfile.Lastname = (Request.Form["lastname"]).ToString() ?? userProfile.Lastname;
             userProfile.Email = (Request.Form["email"]).ToString() ?? userProfile.Email;
+            userProfile.Cell = (Request.Form["cell"]).ToString() ?? userProfile.Cell;
 
             userProfile.AddressOne = (Request.Form["addressone"]).ToString() ?? userProfile.AddressOne;
             userProfile.AddressTwo = (Request.Form["addresstwo"]).ToString() ?? userProfile.AddressTwo;
