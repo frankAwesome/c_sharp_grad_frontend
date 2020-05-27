@@ -4,11 +4,9 @@
     font-size: 15px;
     line-height: 24px;
     color: #545966;
-    position: fixed;
-    right: 0;
+    
+    width: 100%;
     bottom: 0;
-    left: 0;
-    padding: 10px 0 7px 0;
 }
 
     .site-footer hr {
