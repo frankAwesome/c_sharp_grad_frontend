@@ -126,6 +126,9 @@ html, body {
     width: 100%;
     height: 100%;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 .button--bubble__container {
