@@ -5,10 +5,62 @@
 }
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://kit.fontawesome.com/8a169f074f.js" crossorigin="anonymous"></script>
 <script src="~/js/sweetalert2.all.min.js"></script>
 <script src="~/js/sweethelper.js"></script>
 
+<style>
+    .homediv{
+        color: gray;
+    }
+    .donatediv {
+        overflow-y: scroll;
+    }
+    .container-fluid {
+        padding: 25px;
+    }
 
+    #title {
+        font-weight: bold;
+    }
+
+    #about-txt {
+        padding-top: 5%;
+    }
+
+    .stat-con {
+        background-color: #eee;
+        padding: 15px;
+    }
+
+    .bold-text {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 12pt;
+    }
+
+    .figures {
+        font-style: italic;
+        color: #f7a059;
+    }
+
+    .stats {
+        margin-top: 50px;
+    }
+
+    .donate-con {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 20pt;
+    }
+
+    i {
+        padding: 10px;
+        font-size: 40pt;
+    }
+</style>
 <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
@@ -29,33 +81,51 @@
     <div class="text-center">
         <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
 
-        <div class="donatediv">
+        <div class="donatediv container">
 
-            @*<a>Hello</a>*@
-            <br />
-            <br />
-            <br />
-            <br />
-            <div style="display: inline-block; float: left; margin-left:250px;">
-                <h2 class="text-black-50">About</h2>
-                <br />
-               <a class="text-black-50">...members</a>
-            </div>
-
-
-
-
-            <!--<div class="card" style="width: 18rem; float: right; margin-right: 350px;">
-                <img class="card-img-top" src="https://cdn.theatlantic.com/thumbor/CaZyjb4lEsWdh9nc1Sw1WahtRn0=/0x186:5127x2855/960x500/media/img/mt/2020/03/GettyImages_1198676650_toned/original.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">New Confirmed cases</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 id="title">About Donate</h2>
+                    </div>
                 </div>
-            </div>-->
-
-            <div class="container" style="width: 40rem; float: right; margin-right: 100px;">
-               
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6 text-center">
+                        <p id="about-txt">
+                            Donate is a Non-Government Organisation (NGO) aimed at helping South African
+                            communities combat the Corona Virus Pandemic. Our aim is to help the less
+                            privileged access the necessary resources to get through the pandemic. This has been possible
+                            through the generous donations received from multiple stakeholders all over South Africa and the
+                            world as a whole.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid stat-con">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4 text-center  stats">
+                        <p class="bold-text">
+                            Since our inception in 2017, we've helped raise more than
+                        </p>
+                        <h3 class="figures">R567M</h3>
+                        <p class="bold-text">from</p>
+                        <h3 class="figures">2,637,574</h3>
+                        <p class="bold-text">people like you who've supported our initiative</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="~/images//map.PNG" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div class="container donate-con">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1><i class="fas fa-shield-alt"></i> <br />Safe & Easy Donations</h1>
+                        <p>We help donors make safe and easy donations to vetted, locally-driven organizations around South Africa</p>
+                    </div>
+                </div>
             </div>
 
         </div>
