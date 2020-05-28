@@ -6041,23 +6041,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bbdnet2240\\.nuget\\packages\\": {},
+    "C:\\Users\\bbdnet2161\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
+      "projectUniqueName": "D:\\workspaces\\vs-workspace\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
       "projectName": "c_sharp_grad_frontend",
-      "projectPath": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
-      "packagesPath": "C:\\Users\\bbdnet2240\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bbdnet2240\\Projects\\Grad C#\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\obj\\",
+      "projectPath": "D:\\workspaces\\vs-workspace\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\c_sharp_grad_frontend.csproj",
+      "packagesPath": "C:\\Users\\bbdnet2161\\.nuget\\packages\\",
+      "outputPath": "D:\\workspaces\\vs-workspace\\c_sharp_grad_frontend\\c_sharp_grad_frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\bbdnet2240\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bbdnet2161\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6066,7 +6066,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\SandBox\\Discovery\\discoverybank.ioa\\publish": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6098,6 +6097,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6106,7 +6111,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
