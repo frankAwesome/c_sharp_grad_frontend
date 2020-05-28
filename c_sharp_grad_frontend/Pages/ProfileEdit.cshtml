@@ -96,15 +96,15 @@
                         <input type="text" name="cell" value=@Model.userProfile.Cell class="form-control" required placeholder="Cell" />
                     </div>
                     <div class="column">
-                        <input type="text" name="addressone" value=@Model.userProfile.AddressOne class="form-control" placeholder="Address line 1" />
+                        <input type="text" name="addressone" value=@Model.userProfile.AddressOne class="form-control" placeholder="Address line 1" required/>
                         <br />
-                        <input type="text" name="addresstwo" value=@Model.userProfile.AddressTwo class="form-control" placeholder="Address line 2" />
+                        <input type="text" name="addresstwo" value=@Model.userProfile.AddressTwo class="form-control" placeholder="Address line 2" required/>
                         <br />
-                        <input type="text" name="nameoncard" value=@Model.userProfile.NameOnCard class="form-control" placeholder="Name on card" />
+                        <input type="text" name="nameoncard" value=@Model.userProfile.NameOnCard class="form-control" placeholder="Name on card" required/>
                         <br />
-                        <input type="text" name="cardnumber" value=@Model.userProfile.CardNumber class="form-control" placeholder="Card number" />
+                        <input type="text" name="cardnumber" value=@Model.userProfile.CardNumber class="form-control" placeholder="Card number" required/>
                         <br />
-                        <input type="text" name="cvv" value=@Model.userProfile.CVV class="form-control"  placeholder="CVV" />
+                        <input type="text" name="cvv" value=@Model.userProfile.CVV class="form-control"  placeholder="CVV" required/>
                         <br />
                         <label for="cars">Choose payment type:</label>
 
@@ -115,7 +115,7 @@
                         </select>
                         <br />
                         <label for="expdate" class="text-black-50">Exp date:</label>
-                        <input type="date" id="expdate" name="expdate" class="form-control" value="2013-01-08">
+                        <input type="date" id="expdate" name="expdate" class="form-control" value="2013-01-08" required>
                         <br />
                         <div class="form-group">
                             <div class="col-md-10">
