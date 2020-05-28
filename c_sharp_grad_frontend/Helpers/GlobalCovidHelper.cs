@@ -25,25 +25,25 @@ namespace c_sharp_grad_frontend.Helpers
 
         public async Task GetCovidInfo()
         {
-            var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(configuration.GetConnectionString("GetGlobalCovidService"));            
-            string apiResponse = await response.Content.ReadAsStringAsync();
+            string apiResponse;
+            int count = 0;
+            do
+            {
+                var httpClient = new HttpClient();
+                var response = await httpClient.GetAsync(configuration.GetConnectionString("GetGlobalCovidService"));
+                apiResponse = await response.Content.ReadAsStringAsync();
+                count++;
+            } while (apiResponse == "You have reached maximum request limit."&& count<5);
 
             if (apiResponse == "You have reached maximum request limit.")
             {
-                response = await httpClient.GetAsync(configuration.GetConnectionString("GetGlobalCovidService"));
-                apiResponse = await response.Content.ReadAsStringAsync();
-
-                if (apiResponse == "You have reached maximum request limit.")
-                {
                     global.NewConfirmed = 0;
                     global.NewDeaths = 0;
                     global.NewRecovered = 0;
                     global.TotalDeaths = 0;
                     global.TotalRecovered = 0;
                     global.TotalConfirmed = 0;
-                    return;
-                }         
+                    return;       
             }
 
             JObject json = JObject.Parse(apiResponse);
