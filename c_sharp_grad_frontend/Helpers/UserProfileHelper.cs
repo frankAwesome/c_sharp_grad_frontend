@@ -32,13 +32,11 @@ namespace c_sharp_grad_frontend.Helpers
             var httpClient = new HttpClient(SSLHelper.GetSSL());
             httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.token);
             var response = await httpClient.PostAsync(configuration.GetConnectionString("GetUserProfileService"),httpContent);
-            Console.WriteLine(response.StatusCode.ToString());
 
             if (response.StatusCode == HttpStatusCode.InternalServerError)
                 return null;
 
             var responseString = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseString);
 
             this.userProfile = JsonConvert.DeserializeObject<UserProfile>(responseString);
 

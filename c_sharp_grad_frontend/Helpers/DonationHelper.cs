@@ -35,13 +35,11 @@ namespace c_sharp_grad_frontend.Helpers
             var httpClient = new HttpClient(SSLHelper.GetSSL());
             httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.token);
             var response = await httpClient.PostAsync(configuration.GetConnectionString("GetUserDonationsService"), httpContent);
-            Console.WriteLine(response.StatusCode.ToString());
 
             if (response.StatusCode == HttpStatusCode.InternalServerError)
                 return null;
 
             var responseString = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseString);
 
             this.donateList = JsonConvert.DeserializeObject<List<Donations>>(responseString);
 
@@ -80,13 +78,11 @@ namespace c_sharp_grad_frontend.Helpers
             var httpClient = new HttpClient(SSLHelper.GetSSL());
             httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token.token);
             var response = await httpClient.GetAsync(configuration.GetConnectionString("DonateService"));
-            Console.WriteLine(response.StatusCode.ToString());
 
             if (response.StatusCode == HttpStatusCode.InternalServerError)
                 return null;
 
             var responseString = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseString);
 
             this.donateList = JsonConvert.DeserializeObject<List<Donations>>(responseString);
 

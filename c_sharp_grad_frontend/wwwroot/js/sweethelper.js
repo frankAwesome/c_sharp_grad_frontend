@@ -24,6 +24,7 @@ function alert() {
             var millisecondsToWait = 2000;
             setTimeout(function () {
                 // Whatever you want to do after the wait
+                //Change this to where you're hosting...for logout
                 window.location = "https://localhost:44338/";
             }, millisecondsToWait);
             

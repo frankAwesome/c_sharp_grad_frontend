@@ -29,14 +29,21 @@ namespace c_sharp_grad_frontend.Pages
             var helper = new DonationHelper(configuration, token);
             var allUserDonation = await helper.GetAllDonations();
 
-            foreach (var item in allUserDonation)
+            if (allUserDonation != null)
             {
-                totalAmount += item.Amount;
+                foreach (var item in allUserDonation)
+                {
+                    totalAmount += item.Amount;
+                }
+
+                amountOfDonations = allUserDonation.Count();
+
             }
-
-            amountOfDonations = allUserDonation.Count();
-
-
+            else
+            {
+                amountOfDonations = 0;
+                totalAmount = 0;
+            }
 
 
         }
