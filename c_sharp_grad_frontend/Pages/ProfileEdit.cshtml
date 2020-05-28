@@ -26,88 +26,110 @@
     </form>
 </nav>
 
+<style>
+    .backgroundDiv {
+        width: 100%;
+        height: 80vh; 
+        background-image: url('/images/sanitizer.jpg');
+        background-size: cover;
+        justify-content: 'center';
+        align-items: 'center';
+        text-align: center;
+    }
 
-<div class="homediv">
-    <div class="text-center">
-        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
-        <form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
-            <div class="donatediv">
-                <div style="display: inline-block; float: left; margin-left:150px;">
+    .cards {
+        margin: 1vh 0 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+    }
 
-                    <div class="form-group">
-                        <div class="col-md-10">
-                            <br />
-                            <br />
-                            <h2 class="text-black-50">Update your profile...</h2>
-                            <br />
+    .editCards {
+        margin: 1vh 0 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
 
+    .column {
+        float: left;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh;
+    }
+
+    .rows:after {
+        content: "";
+        display: table;
+        clear: both;
+        justify-content: center;
+        align-items: center;
+        
+    }
+</style>
+
+<div class="backgroundDiv">
+    <h1>Update your profile</h1>
+    <div class="cards">
+        <div class="editCards">
+            <div class="rows">
+                <form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
+                    <div class="column">
+                        <div style="display: flex; flex-direction:column; margin: 50% 0 0;">
                             <input type="image" id="avatarimage" src="@imgSrc" style="width:200px;height:200px" class="rounded-circle" />
+                            @* <label for="avatar" class="text-black-50">Select an image...</label> *@
+                            <label  for="avatar" class="btn btn-default btn-file">
+                                Click here to select an image. <input type="file" id="avatar" name="avatar" onchange="readURL(this);" style="display: none;">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <input type="text" name="firstname" value=@Model.userProfile.Firstname class="form-control" required placeholder="Firstname" />
+                        <br />
+                        <input type="text" name="lastname" value=@Model.userProfile.Lastname class="form-control" required placeholder="Lastname" />
+                        <br />
+                        <input type="text" name="email" value=@Model.userProfile.Email class="form-control" required placeholder="Email" />
+                        <br />
+                        <input type="text" name="cell" value=@Model.userProfile.Cell class="form-control" required placeholder="Cell" />
+                    </div>
+                    <div class="column">
+                        <input type="text" name="addressone" value=@Model.userProfile.AddressOne class="form-control" placeholder="Address line 1" />
+                        <br />
+                        <input type="text" name="addresstwo" value=@Model.userProfile.AddressTwo class="form-control" placeholder="Address line 2" />
+                        <br />
+                        <input type="text" name="nameoncard" value=@Model.userProfile.NameOnCard class="form-control" placeholder="Name on card" />
+                        <br />
+                        <input type="text" name="cardnumber" value=@Model.userProfile.CardNumber class="form-control" placeholder="Card number" />
+                        <br />
+                        <input type="text" name="cvv" value=@Model.userProfile.CVV class="form-control"  placeholder="CVV" />
+                        <br />
+                        <label for="cars">Choose payment type:</label>
 
-                            <br />
-                            <label for="avatar" class="text-black-50">Select an image...</label>
-                            <input type="file" id="avatar" name="avatar" class="form-control-file" onchange="readURL(this);" />
-                            <br />
-                            <input type="text" name="firstname" value=@Model.userProfile.Firstname class="form-control" required placeholder="Firstname" />
-                            <br />
-                            <input type="text" name="lastname" value=@Model.userProfile.Lastname class="form-control" required placeholder="Lastname" />
-                            <br />
-                            <input type="text" name="email" value=@Model.userProfile.Email class="form-control" required placeholder="Email" />
-                            <br />
-                            <input type="text" name="cell" value=@Model.userProfile.Cell class="form-control" required placeholder="Cell" />
-
-
+                        <select id="paymenttypes" class="form-control" name="paymenttype">
+                            <option value="cheque">Cheque</option>
+                            <option value="savings">Savings</option>
+                            <option value="credit">Credit card</option>
+                        </select>
+                        <br />
+                        <label for="expdate" class="text-black-50">Exp date:</label>
+                        <input type="date" id="expdate" name="expdate" class="form-control" value="2013-01-08">
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Update profile" class="btn btn-danger" />
+                            </div>
                         </div>
                     </div>
 
-
-
-                </div>
-
-
-                <div style="float: right; margin-right: 650px; width: 270px;" class="form-group">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-
-                    <input type="text" name="addressone" value=@Model.userProfile.AddressOne class="form-control" placeholder="Address line 1" />
-                    <br />
-                    <input type="text" name="addresstwo" value=@Model.userProfile.AddressTwo class="form-control" placeholder="Address line 2" />
-                    <br />
-                    <input type="text" name="nameoncard" value=@Model.userProfile.NameOnCard class="form-control" placeholder="Name on card" />
-                    <br />
-                    <input type="text" name="cardnumber" value=@Model.userProfile.CardNumber class="form-control" placeholder="Card number" />
-                    <br />
-                    <input type="text" name="cvv" value=@Model.userProfile.CVV class="form-control"  placeholder="CVV" />
-                    <br />
-                    <label for="cars">Choose payment type:</label>
-
-                    <select id="paymenttypes" class="form-control" name="paymenttype">
-                        <option value="cheque">Cheque</option>
-                        <option value="savings">Savings</option>
-                        <option value="credit">Credit card</option>
-                    </select>
-                    <br />
-                    <label for="expdate" class="text-black-50">Exp date:</label>
-                    <input type="date" id="expdate" name="expdate" class="form-control" value="2013-01-08">
-
-                    <br />
-                    <div class="form-group">
-                        <div class="col-md-10">
-                            <input type="submit" value="Update profile" class="btn btn-danger" />
-                        </div>
-                    </div>
-
-                </div>
-
-
+                </form>
+                
             </div>
+        </div>
 
-
-        </form>
     </div>
-
-
 </div>
 
 
