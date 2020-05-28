@@ -42,7 +42,7 @@
 
                             <br />
                             <label for="avatar" class="text-black-50">Select an image...</label>
-                            <input type="file" id="avatar" name="avatar" class="form-control-file" onchange="readURL(this);" />
+                            <input type="file" id="avatar" name="avatar" class="form-control-file" onchange="readURL(this);" required/>
                             <br />
                             <input type="text" name="firstname" placeholder="Firstname" class="form-control" required />
                             <br />
@@ -67,15 +67,15 @@
                     <br />
                     <br />
 
-                    <input type="text" name="addressone" placeholder="Address line 1" class="form-control" />
+                    <input type="text" name="addressone" placeholder="Address line 1" class="form-control" required/>
                     <br />
                     <input type="text" name="addresstwo" placeholder="Address line 2" class="form-control" />
                     <br />
-                    <input type="text" name="nameoncard" placeholder="Name on card" class="form-control" />
+                    <input type="text" name="nameoncard" placeholder="Name on card" class="form-control" required/>
                     <br />
-                    <input type="text" name="cardnumber" placeholder="Card number" class="form-control" />
+                    <input type="text" name="cardnumber" placeholder="Card number" class="form-control" required/>
                     <br />
-                    <input type="text" name="cvv" placeholder="CVV" class="form-control" />
+                    <input type="text" name="cvv" placeholder="CVV" class="form-control" required/>
                     <br />
                     <label for="cars">Choose payment type:</label>
 
@@ -86,7 +86,7 @@
                     </select>
                        <br/>
                     <label for="expdate" class="text-black-50">Exp date:</label>
-                    <input type="date" id="expdate" name="expdate" class="form-control">
+                    <input type="date" id="expdate" name="expdate" class="form-control" required>
 
                     <br />
                     <div class="form-group">
