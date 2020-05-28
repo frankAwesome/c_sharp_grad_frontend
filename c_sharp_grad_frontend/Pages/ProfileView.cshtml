@@ -25,78 +25,88 @@
     </form>
 </nav>
 
+<style>
 
+    .backgroundDiv {
+        width: 100%;
+        height: 80vh; 
+        background-image: url('/images/sanitizer.jpg');
+        background-size: cover;
+        justify-content: 'center';
+        align-items: 'center';
+        position: relative;
+    }
 
-<div class="homediv">
-    <div class="text-center">
-        <img src="~/images/logo2.jpg" style="width:190px; height: 140px;" class="logo" />
-        <div class="donatediv">
+    .cards {
+        margin: 1vh 0 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+ 
+    }
 
-            <br />
-            <br />
+    .profileCard {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 20px;
+        margin: 1vh 0 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh;
+        background-color: rgba(255,255,255,0.2);
+    }
 
-            <div style="display: inline-block; float: left; margin-left:150px;">
-                <h1 class="text-black-50">@Model.userProfile.Username's Profile</h1>
-                <br />
-                <br />
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5vh 0 4vh;
+        }
+        
+    .left-half {
+        flex: 1;
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        }
 
+    .right-half {
+        flex: 1;
+        padding: 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        }
+</style>
+
+<div class='backgroundDiv'>
+    <div style='display: flex; justify-content: center; position: relative;'>
+        <div class="cards">
+            <h1>Your profile</h1>
+            <div class="profileCard">
                 <input type="image" src="@imgSrc" style="width:200px;height:200px" class="rounded-circle" />
-
-                <br />
-                <br />
-                <br />
-                <a class="text-black-50">Firstname: @Model.userProfile.Firstname</a>
-                <br />
-                <a class="text-black-50">Lastname: @Model.userProfile.Lastname</a>
-                <br />
-                <a class="text-black-50">Username: @Model.userProfile.Username</a>
-                <br />
-                <a class="text-black-50">Email: @Model.userProfile.Email</a>
-                <br />
-                <a class="text-black-50">Cell: @Model.userProfile.Cell</a>
-            </div>
-
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div style="float: right; margin-right: 650px;">
-                <a class="text-black-50">Address line 1: @Model.userProfile.AddressOne</a>
-                <br />
-                <a class="text-black-50">Address line 2: @Model.userProfile.AddressTwo</a>
-                <br />
-                <br />
-                <br />
-                <a class="text-black-50">Name on card: @Model.userProfile.NameOnCard</a>
-                <br />
-                <a class="text-black-50">Payment type: @Model.userProfile.PaymentType</a>
-                <br />
-                <a class="text-black-50">Card Number: @Model.userProfile.CardNumber</a>
-                <br />
-                <a class="text-black-50">CVV: @Model.userProfile.CVV</a>
-                <br />
-                <a class="text-black-50">Exp date: @Model.userProfile.ExpirationOnCard</a>
-                <br />
-                <br />
-                <br />
-
+                <div class="container">
+                    <div class="left-half">
+                        <h4>Firstname: @Model.userProfile.Firstname</h4>
+                        <h4>Lastname: @Model.userProfile.Lastname</h4>
+                        <h4>Username: @Model.userProfile.Username<h4>
+                        <h4>Email: @Model.userProfile.Email<h4>
+                        <h4>Cell: @Model.userProfile.Cell<h4>
+                        <h4>Address line 1: @Model.userProfile.AddressOne<h4>
+                        <h4>Address line 2: @Model.userProfile.AddressTwo<h4>
+                    </div>
+                    <div class="right-half">
+                        <h4>Name on card: @Model.userProfile.NameOnCard<h4>
+                        <h4>Payment type: @Model.userProfile.PaymentType<h4>
+                        <h4>Card Number: @Model.userProfile.CardNumber<h4>
+                        <h4>CVV: @Model.userProfile.CVV<h4>
+                        <h4>Exp date: @Model.userProfile.ExpirationOnCard<h4>
+                    </div>
+                </div>
                 <a class="btn btn-danger" asp-page="/profileedit">Edit profile</a>
-
             </div>
-
-
-
-
-
         </div>
-
-
-
-
     </div>
 </div>
-
-
